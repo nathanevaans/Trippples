@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+        }
+
+        #app {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #board {
+            display: flex;
+            flex-wrap: wrap;
+            background: grey;
+            width: 400px;
+
+            border: black solid 3px;
+        }
+
+        .HBox {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .HBox > span {
+            margin: 7px;
+        }
+
+        .HBox > div {
+            margin: 10px;
+        }
+
+        .VBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 225px;
+            height: 200px;
+        }
+    </style>
+    <title>Trippples</title>
+</head>
+<body>
+<div id="app">
+    <div id="board"></div>
+    <div class="HBox">
+        <div class="VBox">
+            <button id="newBoard">new board</button>
+            <label for="difficultyRange">two player</label>
+            <input id="difficultyRange" type="range" min="0" max="13" value="0">
+            <div id="aiPlayerChooser" class="HBox" style="display: none">
+                <span style="margin: 3px">ai plays:</span>
+                <button id="singlePlayerCharacterSwap" style="width: 50px">square</button>
+            </div>
+        </div>
+        <div class="VBox">
+            <div class="HBox">
+                <span id="circleWins">circle: 0</span>
+                <span id="squareWins">square: 0</span>
+                <span id="draws">draws: 0</span>
+            </div>
+            <button id="resetScores">reset scores</button>
+        </div>
+    </div>
+</div>
+<script src="trippples.js"></script>
+</body>
+</html>
