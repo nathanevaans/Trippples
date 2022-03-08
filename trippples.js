@@ -583,10 +583,3 @@ state.ui.mode.changeAIPlayerButton.onclick = () => {
 
 // ENTRY POINT
 createBoard()
-
-/*
-* when you've got nothing in you luck bucket
-* tell your manager he can f*ck it
-* even his mother can suck it
-* you've got nothing left, in your luck bucket
-* */
