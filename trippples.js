@@ -389,7 +389,6 @@ const handleTileClick = (tileDiv) => {
 }
 
 const handlePieceDrag = (event, pieceImg) => {
-    event.preventDefault()
     event.dataTransfer.setData('text/plain', pieceImg.id)
 }
 
