@@ -462,6 +462,7 @@ const createPiece = (piece) => {
                         <rect x="10" y="10" width="30" height="30" stroke-width="3" stroke="limegreen" fill="none"/>
                     </svg>`
     pieceImage.ondragstart = (event) => handlePieceDrag(event, pieceImage)
+    pieceImage.oncontextmenu = (event) => event.preventDefault()
     return pieceImage
 }
 
