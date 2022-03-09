@@ -388,9 +388,13 @@ const handleTileClick = (tileDiv) => {
     }
 }
 
-const handlePieceDrag = (event, pieceImg) => event.dataTransfer.setData('text/plain', pieceImg.id);
+const handlePieceDrag = (event, pieceImg) => {
+    event.preventDefault()
+    event.dataTransfer.setData('text/plain', pieceImg.id)
+}
 
 const handlePieceDrop = (event, tileDiv) => {
+    event.preventDefault()
     if (state.game.current.player === event.dataTransfer.getData('text')) gameLogic(tileDiv)
 }
 
